@@ -1,7 +1,7 @@
 &control
     calculation = 'scf'
     prefix = 'bp-hfO2'
-    pseudo_dir = '/content/drive/MyDrive/pseudo_1'
+    pseudo_dir = './'
 /
 &system
     ibrav=0,
