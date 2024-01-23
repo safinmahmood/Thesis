@@ -1,43 +1,22 @@
-&CONTROL
-   calculation      = 'scf'
-   verbosity        = 'high'
-   restart_mode     = 'from_scratch'
-   tstress          = .true.
-   pseudo_dir       = '\\wsl.localhost\Ubuntu\home\blank_sheet\pseudo_inputs\pseudo'
+&control
+    calculation = 'scf'
+    prefix = 'bp-hfO2'
+    pseudo_dir = '/content/drive/MyDrive/pseudo_1'
 /
-&SYSTEM
-   ecutwfc          = 30
-   ecutrho          = 240
-   occupations      = 'smearing'
-   degauss          = 0.001
-   smearing         = 'mp'
-   nspin            = 1
-   ntyp             = 3
-   nat              = 5
-   ibrav            = 0
+&system
+    ibrav=0,
+    nat=3, ntyp=2,
+    ecutwfc=40.0
 /
-&ELECTRONS
-   mixing_mode      = 'plain'
-   mixing_beta      = 0.7
-   diagonalization  = 'david'
+&electrons
 /
 ATOMIC_SPECIES
-Ba 137.327 Ba.pbe-spn-kjpaw_psl.1.0.0.UPF
-Ti 47.867 ti_pbe_v1.4.uspp.F.UPF
-O 15.999 O.pbe-n-kjpaw_psl.0.1.UPF
-
-CELL_PARAMETERS angstrom
-4.00768164000000 0.00000000000000 0.00000000000000
-0.00000000000000 4.00768164000000 0.00000000000000
-0.00000000000000 0.00000000000000 4.00768164000000
-
-ATOMIC_POSITIONS angstrom
-Ba 2.0038408200 2.0038408200 2.0038408200 
-Ti 0.0000000000 0.0000000000 0.0000000000 
-O 2.0038408200 0.0000000000 0.0000000000 
-O 0.0000000000 2.0038408200 0.0000000000 
-O 0.0000000000 0.0000000000 2.0038408200 
-
-
-K_POINTS automatic
-4 4 4 0 0 0 
+ Hf 178.49   Hf-sp.oncvpsp.upf'
+ P  30.97    P.pbe-n-rrkjus_psl.1.0.0.UPF'
+ O  16.00    O.pbe-n-kjpaw_psl.0.1.UPF'
+ATOMIC_POSITIONS (alat)
+ Hf 0.00 0.00 0.00
+ P  1.00 1.00 1.00
+ O  0.50 0.50 0.50   
+K_POINTS (automatic)
+  6 6 6 0 0 0
