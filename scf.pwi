@@ -1,0 +1,45 @@
+&control
+    calculation = 'scf'
+    prefix = 'P'
+    outdir = './outdir'
+    pseudo_dir = '/content/drive/MyDrive/pseudo/'
+    etot_conv_thr = 1e-5
+    forc_conv_thr = 1e-4
+/
+&SYSTEM
+    ibrav = 0, celldm(1) = 6.25499347
+    nat = 8, ntyp = 1,
+    ecutwfc = 50.0 ,
+    ecutrho = 500.0 ,
+    occupations = 'smearing', degauss = 0.0001, smearing = 'marzari-vanderbilt'
+    vdw_corr='DFT-D3'
+    dftd3_version = 2
+/
+&ELECTRONS
+    conv_thr = 1.0d-8,
+/
+&IONS
+    ion_dynamics='bfgs'
+/
+
+ATOMIC_SPECIES
+ P  30.97376  P.pbe-n-rrkjus_psl.1.0.0.UPF
+
+CELL_PARAMETERS (alat=  6.25499347)
+   1.005359030   0.000000000   0.000000000
+   0.000000000   1.395839364   0.000000000
+   0.000000000   0.000000000   9.063444109
+
+ATOMIC_POSITIONS (crystal)
+P             0.0000000000        0.5992304043        0.3690037536
+P             0.0000000000        0.4149466308        0.4411797905
+P             0.5000000000        0.0850533692        0.4411797905
+P             0.5000000000        0.9007695957        0.3690037536
+P            -0.0000000000        0.5850501758        0.5417692184
+P             0.0000000000        0.4007672004        0.6139472716
+P             0.5000000000        0.0992327996        0.6139472716
+P             0.5000000000        0.9149498832        0.5417692184
+
+
+K_POINTS automatic
+10 10 1 0 0 0
